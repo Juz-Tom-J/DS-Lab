@@ -77,3 +77,4 @@ int main()
 printf(" The postfix expression is: %s\n",postfix);
 printf(" Result after evaluation is :%d",arr[top]);
 }
+ 
