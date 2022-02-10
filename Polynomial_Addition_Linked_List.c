@@ -123,22 +123,17 @@ struct node* polyAdd(struct node *p1,struct node *p2, struct node *sum)
   return sum;
 }
 
-
 void display(struct node* head)
 
 {
 
    struct node *temp=head;
-   while(temp!= NULL)
+   while(temp!=NULL)
    {
-     printf("%dx^%d", temp->coeff,temp->exp);  
-     temp = temp->next;
+      printf("%d^%d+", temp->co,temp->exp);  
+      temp = temp->next;
+   
    }
-   
-   if(temp!=NULL)
-     printf("+");
-   
-   printf("\n");
 }
 
 void main()
