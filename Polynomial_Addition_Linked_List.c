@@ -130,10 +130,11 @@ void display(struct node* head)
    struct node *temp=head;
    while(temp!=NULL)
    {
-      printf("%d^%d+", temp->co,temp->exp);  
+      printf("%d^%d+", temp->coeff,temp->exp);  
       temp = temp->next;
    
    }
+   printf("\n");
 }
 
 void main()
