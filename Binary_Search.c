@@ -2,14 +2,17 @@
 
 int main()
 
-{int arr[10],i,n,first,last,middle,search,option;
+{int arr[10],i,n,first,last,middle,search,option,count=0,space;
+ count++;
 
  printf("Enter the limit of the array: ");
  scanf("%d",&n);
+ count++;
  
  printf("Enter the array elements: ");
  for(i=0;i<n;i++)
- scanf("%d",&arr[i]);
+ {scanf("%d",&arr[i]);
+  count++;}
  
  printf("The array elements are: ");
  for(i=0;i<n;i++)
@@ -19,10 +22,13 @@ int main()
  {
   first=0;
   last=n-1;
+  count+=2;
   middle=(first+last)/2;
+  count++;
 
   printf("\n Enter the element to be searched: ");
   scanf("%d",&search);
+  count++;
  
   while(first<=last)
    
@@ -38,12 +44,17 @@ int main()
          last=middle-1;
      
     middle=(first+last)/2;
+    count++;
        }
 
  if(first>last)
    printf("%d not found in array list",search);
+   count++;
    printf("\n Do you wish to continue Y(1) or N(0)");
    scanf("%d",&option);
+   count++;
    }while(option==1);
-
+ printf("Time complexity is %d\n",count);
+ space = 9*sizeof(int)+10*sizeof(int);
+ printf("Space complexity is %d\n",space);
  }
